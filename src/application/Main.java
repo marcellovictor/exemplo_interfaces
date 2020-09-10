@@ -38,8 +38,18 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-		
 		Rental rental = new Rental(model, pickup, returno);
+		
+		//prices
+		
+		System.out.print("Enter price per hour: ");
+		double priceHour = sc.nextDouble();
+		System.out.print("Enter price per day: ");
+		double priceDay = sc.nextDouble();
+		
+		rental.setPrices(priceHour, priceDay);
+		
+		rental.printInvoice();
 		
 		sc.close();
 	}
